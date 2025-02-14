@@ -5,3 +5,4 @@ services:
     stdin_open: true
     tty: true
     command: /bin/bash
+    volumes: /home/retro/gem5_research
