@@ -1,0 +1,7 @@
+services:
+  gem5:
+    image: gem5_img_2_13
+    container_name: gem5_container
+    stdin_open: true
+    tty: true
+    command: /bin/bash
