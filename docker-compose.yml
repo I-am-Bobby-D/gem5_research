@@ -5,4 +5,4 @@ services:
     stdin_open: true
     tty: true
     command: /bin/bash
-    volumes: /home/retro/gem5_research
+    volumes: - /home/retro/gem5_research:/workspace/gem5_research
