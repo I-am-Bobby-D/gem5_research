@@ -1,12 +1,12 @@
 services:
   gem5:
-    image: gem5_img_2_13 # points to image, will likely revise naming convention
+    image: gem5_img_zsh:latest # points to image, will likely revise naming convention
     container_name: gem5_container
     stdin_open: true
     tty: true
-    command: /bin/zsh  # Keeps alive
+    command: /bin/zsh  --login # start zsh
     volumes:
-      - /home/retro/gem5_research:/workspace/gem5_research
+      - /home/retro/gem5_research:/workspace/gem5_research # mount gem5_research
     devices:
-      - /dev/kvm  # Grants KVM access to the container
+      - /dev/kvm:/dev/kvm  # Grants KVM access to the container
     privileged: true
